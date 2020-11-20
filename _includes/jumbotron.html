@@ -1,0 +1,32 @@
+{% comment %}
+
+    Bootstrap Jumbotron, https://getbootstrap.com/docs/4.5/components/jumbotron/
+    This include adds a Jumbotron feature.
+    All options are optional!
+
+    Options:
+    - "title" = large text with display font
+    - "lead" = paragraph with larger text
+    - "text" = paragraph
+    - "btn-text" = text for button link, be sure to include btn-link
+    - "btn-link" = href for button, be sure to include btn-text 
+    - "img" = the filename of the image located in the project or url
+
+{%- endcomment -%}
+{% if include.img %}
+<style>
+#jumbtron-feature {
+    background-image: url({{ include.img | absolute_url }});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+</style>{% endif %}
+<div class="jumbotron" id="jumbotron-feature">
+    <div class="container">
+        {% if include.title %}<h1 class="display-3">{{ include.title | markdownify }}</h1>{% endif %}
+        {% if include.lead %}<p class="lead">{{ include.lead | markdownify }}</p>{% endif %}
+        {% if include.text %}<p>{{ include.text | markdownify }}</p>{% endif %}
+        {% if include.btn-link %}<a class="btn btn-primary btn-lg" href="{{ include.btn-link }}">{{ include.btn-text }}</a>{% endif %}
+    </div>
+</div>

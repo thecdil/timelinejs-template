@@ -8,6 +8,7 @@
         {% include template/header.html %}
         <main id="maincontent" role="main" aria-label="Content" class="mb-4 flex-shrink-0">
         {{ content }}
+        {% if page.layout == "default" and page.timeline %}<div id='{{ page.timeline }}' style="height: 600px" class="w-100 mb-4"></div>{% endif %}
         </main>
         {% include template/footer.html %}
         {% include template/foot.html %}

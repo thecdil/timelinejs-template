@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include template/head.html %}
+    </head>
+    <body>
+        {{ content }}
+        {% if page.timeline %}<div id='{{ page.timeline }}' style="height: 600px" class="w-100 mb-4"></div>{% endif %}
+        {% include template/foot.html %}
+    </body>
+</html>

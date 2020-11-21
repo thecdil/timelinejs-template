@@ -1,0 +1,63 @@
+<script src="{{ '/assets/lib/timeline3/js/timeline-min.js' | relative_url }}"></script>
+<script>
+/* add timeline events to json style object */
+{%- assign timeline = site.data[page.timeline] -%}
+{%- assign title = timeline | where: 'Type','title' | first -%}
+{%- assign eras = timeline | where: 'Type','era' -%}
+{%- assign events = timeline | where_exp: 'f','f.Type != "title"' -%}
+var timelineEvents = {
+    {% if title %}
+    /* add title slide */
+    "title": {
+        {% if title['Media'] %}"media": {
+            {% if title['Media Caption'] %}"caption": {{ title['Media Caption'] | markdownify | jsonify }},{% endif %}
+            {% if title['Media Credit'] %}"credit": {{ title['Media Credit'] | markdownify | jsonify }},{% endif %}
+            "url": "{{ title['Media'] | absolute_url }}"
+        },{% endif %}
+        "text": {
+            "headline": {{ title['Headline'] | markdownify | jsonify }}{% if title['Text'] %},
+            "text": {{ title['Text'] | markdownify | jsonify }}{% endif %}
+        }
+    },
+    {%- endif -%}
+    {% if eras != empty %}
+    "eras": [ ],
+    {%- endif -%}
+    "events": [
+        {% for event in events %}{
+            {% if event['Media'] %}"media": {
+                // Media,Media Credit,Media Caption,Media Thumbnail
+                "caption": {{ event['Media Caption'] | markdownify | jsonify }},
+                "credit": {{ event['Media Credit'] | markdownify | jsonify }},
+                {% if event['Media Thumbnail'] %}"thumbnail": {{ event['Media Thumbnail'] | markdownify | jsonify }},{% endif %}
+                "url": {% if event['Media'] contains 'http' %}{{ event['Media'] | jsonify }}{% else %}{{ '/media/' | append: event['Media'] | relative_url | jsonify }}{% endif %}
+            },{% endif %}
+            "text": {
+                //Headline,Text
+                "headline": {{ event['Headline'] | markdownify | jsonify }}{% if event['Text'] %},
+                "text": {{ event['Text'] | markdownify | jsonify }}{% endif %}
+            },
+            {% if event['Background'] %}"background": {{ event['Background'] | jsonify }},{% endif %}
+            {% if event['Group'] %}"group": {{ event['Group'] | jsonify }},{% endif %}
+            {% if event['Display Date'] %}"display_date": {{ event['Display Date'] | jsonify }},{% endif %}
+            {% if event['End Year'] %}"end_date": { 
+                // End Year,End Month,End Day,End Time
+                {% if event['End Month'] %}"month": "{{ event['Month'] }}",{% endif %}
+                {% if event['End Day'] %}"day": "{{ event['Day'] }}",{% endif %}
+                "year": "{{ event['End Year'] }}"
+            },{% endif %}
+            "start_date": { 
+                // Year,Month,Day
+                {% if event['Month'] %}"month": "{{ event['Month'] }}",{% endif %}
+                {% if event['Day'] %}"day": "{{ event['Day'] }}",{% endif %}
+                "year": "{{ event['Year'] }}"
+            }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+};
+</script>
+<script type="text/javascript">
+    /* init timeline */
+    timeline = new TL.Timeline('{{ page.timeline }}', timelineEvents);
+</script>

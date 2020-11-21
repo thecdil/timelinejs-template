@@ -1,0 +1,26 @@
+csv_field,object,key
+Year,start_date,year
+Month,start_date,month
+Day,start_date,day
+Time,start_date,hour
+,start_date,minute
+,start_date,second
+End Year,end_date,year
+End Month,end_date,month
+End Day,end_date,day
+End Time,end_date,hour
+,end_date,minute
+,end_date,second
+Display Date,display_date,false
+Headline,text,headline
+Text,text,text
+Media,media,url
+Media Credit,media,credit
+Media Caption,media,caption
+Media Thumbnail,media,thumbnail
+,media,alt
+,media,title
+,media,link
+Type,false
+Group,group,false
+Background,background,false

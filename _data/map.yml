@@ -1,0 +1,24 @@
+objects: 
+  - title:
+  - events:
+    - start_date:
+      - year: "Year"
+      - month: "Month"
+      - day: "Day"
+      - hour: "Time"
+    - end_date: 
+      - year: "End Year"
+      - month: "End Month"
+      - day: "End Day"
+      - hour: "End Time"
+    - display_date: "Display Date"
+    - text:
+      - text: "Text"
+      - headline: "Headline"
+    - media:
+      - url: "Media"
+      - credit: "Media Credit"
+      - caption: "Media Caption"
+      - thumbnail: "Media Thumbnail"
+    - group: "Group"
+    - background: "Background"

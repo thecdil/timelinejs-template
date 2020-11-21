@@ -1,13 +1,14 @@
 #######
 #
-# bootstrap-template
-# basic bootstrap template for Jekyll with GitHub Pages
-# https://github.com/uidaholib/bootstrap-template
+# timelinejs-template
+# basic template for self-hosted TimelineJS
+# https://github.com/uidaholib/timelinejs-template
 #
 #######
 
 #######
-# Site URLs
+# SITE URLs
+#
 # add the url for the domain,
 # on gh-pages follow the pattern: https://username.github.io 
 url: https://uidaholib.github.io
@@ -16,24 +17,26 @@ url: https://uidaholib.github.io
 baseurl: /timelinejs-template
 
 #######
-# Site settings
+# SITE SETTINGS
+#
 title: timelinejs-template
 description: "basic template for self-hosted TimelineJS"
 year: 2020
 author: evan will 
-
-#######
-# Options
-#
 # add search box to navbar, true/false
 search: false
 
+##########
+# GOOGLE ANALYTICS [optional!]
+#
+# leave this blank or comment out to NOT include google code
+# google-analytics-id: "UA-74844011-1"
 
-#######
-# add google analytics if desired (optional)
-# if blank, it will be ignored
-# use JEKYLL_ENV=production on build command
-google_analytics: 
+##########
+# ROBOTS EXCLUDE
+#
+# set noindex to true if you do NOT want Google to index your site
+# noindex: true 
 
 
 #######
@@ -46,3 +49,6 @@ defaults:
     values:
       layout: page
       permalink: /:basename:output_ext
+
+# ignore stuff
+exclude: [docs/, Rakefile, README.md, LICENSE]

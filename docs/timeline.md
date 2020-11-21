@@ -69,3 +69,10 @@ Layout options:
 
 Content can be written on the page and will appear above the timeline. 
 If the `timeline` option is not added to the front matter, the stub will act as a normal content page.
+
+# Reference
+
+- [TimelineJS json docs](https://timeline.knightlab.com/docs/json-format.html)
+- [json example](https://github.com/NUKnightLab/TimelineJS3/blob/master/website/templates/examples/houston/timeline3.json)
+- [TimelineJS js docs](https://timeline.knightlab.com/docs/instantiate-a-timeline.html)
+- [Spreadsheet docs](https://timeline.knightlab.com/docs/using-spreadsheets.html)

@@ -16,7 +16,7 @@ This approach is more sustainable, keeping the library assets, metadata, and med
 
 ### 1. Set up repository 
 
-- Make your own copy of the [timelinejs-template](https://github.com/uidaholib/timelinejs-template) repository by clicking the green "Use this template" button (alternatively, use Import or manually copy files to a new repo).
+- Make your own copy of the [timelinejs-template](https://github.com/thecdil/timelinejs-template) repository by clicking the green "Use this template" button (alternatively, use Import or manually copy files to a new repo).
 - Activate GitHub Pages in your new repository's "Settings".
 
 ### 2. Create Timeline Spreadsheet 

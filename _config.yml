@@ -2,7 +2,7 @@
 #
 # timelinejs-template
 # basic template for self-hosted TimelineJS
-# https://github.com/uidaholib/timelinejs-template
+# https://github.com/thecdil/timelinejs-template
 #
 #######
 
@@ -11,7 +11,7 @@
 #
 # add the url for the domain,
 # on gh-pages follow the pattern: https://username.github.io 
-url: https://uidaholib.github.io
+url: https://thecdil.github.io
 # add subsection of the domain,
 # on gh-pages this is a / followed by the name of the repository
 baseurl: /timelinejs-template

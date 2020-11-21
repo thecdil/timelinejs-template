@@ -4,11 +4,14 @@
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
 {% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
+<!-- built with timeline-recipe https://github.com/uidaholib/timelinejs-template -->
 <meta name="generator" content="uidaholib/timelinejs-template">
 <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | absolute_url }}">
 
 <link rel="stylesheet" href="{{ '/assets/lib/bootstrap.min.css' | relative_url }}">
-
+{% if page.timeline %}<link rel="stylesheet" href="{{ '/assets/lib/timeline3/css/timeline.css' | relative_url }}">{% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | absolute_url }}" type="text/css">
 
-{% if site.google_analytics %}{% include template/google-analytics.html %}{%- endif -%}
+{% if site.noindex == true or page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+{% if site.google-analytics-id %}{% include template/google-analytics.html %}{%- endif -%}
+<!-- Last build date: {{ site.time | date: "%Y-%m-%d" }} -->

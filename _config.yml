@@ -7,16 +7,6 @@
 #######
 
 #######
-# SITE URLs
-#
-# add the url for the domain,
-# on gh-pages follow the pattern: https://username.github.io 
-url: https://thecdil.github.io
-# add subsection of the domain,
-# on gh-pages this is a / followed by the name of the repository
-baseurl: /timelinejs-template
-
-#######
 # SITE SETTINGS
 #
 title: timelinejs-template
@@ -26,11 +16,25 @@ author: evan will
 # add search box to navbar, true/false
 search: false
 
+#######
+# SITE URLs
+#
+# Optional if using GitHub Pages!
+# If building manually, these must be set correctly.
+#
+# add the url for the domain,
+# on gh-pages follow the pattern: https://username.github.io 
+# url: https://thecdil.github.io
+# add subsection of the domain,
+# on gh-pages this is a / followed by the name of the repository
+# baseurl: /timelinejs-template
+
 ##########
 # GOOGLE ANALYTICS [optional!]
 #
 # leave this blank or comment out to NOT include google code
-# google-analytics-id: "UA-74844011-1"
+# Add your google-analytics-id to automatically add the embed code, e.g. "UA-76328753-1"
+# google-analytics-id: 
 
 ##########
 # ROBOTS EXCLUDE

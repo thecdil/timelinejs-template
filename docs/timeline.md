@@ -38,17 +38,17 @@ These limitations:
 - "Time" column is not implemented
 - "Eras" are not implemented
 
-### Add spreadsheet to repository 
+### 3. Add spreadsheet to repository 
 
 Download or save your spreadsheet as a CSV (it must be a CSV!). 
-Rename to use a filename with no spaces or odd characters, e.g. `example-timeline.csv`.
+Rename to use a filename with no spaces or special characters (other than dash `-` or underscore `_`), e.g. `example-timeline.csv`.
 
 Copy your spreadsheet into the "_data" folder in your repository.
 
-### Add timeline to a page
+### 4. Add timeline to a page
 
 Add the timeline to any page in the repository using the front matter option `timeline:` with the name of your CSV file (minus the `.csv` extension).
-Choose a `layout:` value depending on how you want to display the timeline.
+Optionally choose a `layout:` value depending on how you want to display the timeline.
 For example, your front matter might look like:
 
 ```
@@ -69,6 +69,25 @@ Layout options:
 
 Content can be written on the page and will appear above the timeline. 
 If the `timeline` option is not added to the front matter, the stub will act as a normal content page.
+
+## Create a Timeline from JSON File
+
+You may have a TimelineJS formatted JSON file, for example downloaded from a [CollectionBuilder](https://collectionbuilder.github.io/) data export, and want a place to host it.
+
+1. Set up your project repository as in the Basic example above.
+2. Add your TimelineJS JSON file to the repository's "media" folder, e.g. `media/example-timeline.json`
+3. Add the timeline to any page in the repository using the front matter option `timeline-json` with the name of your json file (including the extension). Optionally choose a `layout` value depending on how you want to display the timeline.
+
+For example, your front matter might look like:
+
+```
+---
+title: A JSON based Timeline
+layout: default
+# add TimelineJS
+timeline-json: example-timeline.json
+---
+```
 
 # Reference
 

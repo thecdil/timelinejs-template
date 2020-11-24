@@ -5,6 +5,8 @@ It is compatible with existing timelines created in Google Sheets following the 
 
 See docs/timeline.md to get started!
 
+Demo: <https://thecdil.github.io/timelinejs-template/>
+
 ## Why timelinejs-template?
 
 [TimelineJS](https://timeline.knightlab.com/) is a very popular open-source project to create visual timelines that can be embedded on a webpage.

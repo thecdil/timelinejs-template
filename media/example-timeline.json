@@ -1,0 +1,58 @@
+{
+    "title": {
+        "media": {
+          "url": "https://digital.lib.uidaho.edu/digital/iiif/spec_cs/74/full/max/0/default.jpg",
+          "caption": "Priest Lake (Idaho)",
+          "credit": "C.H. Shattuck Lantern Slides, 1904-1910"
+        },
+        "text": {
+          "headline": "C.H. Shattuck Lantern Slides, 1904-1910 Timeline",
+          "text": "UI Professor Charles Houston Shattuck used these slides as a teaching tool in the early 20th century. They depict the University of Idaho, as well as the wilderness of Idaho and Idaho residents' attempts at domesticating it."
+        }
+    },
+    "events": [
+      {
+        "media": {
+          "url": "https://digital.lib.uidaho.edu/digital/iiif/spec_cs/99/full/pct:12/0/default.jpg",
+          "caption": "Selway National Forest (Idaho), Three Forks Cabin",
+          "link": "https://www.lib.uidaho.edu/digital/shattuck/items/shattuck99.html",
+          "credit": "C.H. Shattuck Lantern Slides, 1904-1910"
+        },
+        "start_date": { 
+          "year": "1904"
+        },
+        "text": {
+          "headline": "Selway National Forest (Idaho), Three Forks Cabin",
+          "text": "Three Forks Cabin, Selway National Forest"
+        }
+      },{
+        "media": {
+          "url": "https://digital.lib.uidaho.edu/digital/iiif/spec_cs/177/full/pct:12/0/default.jpg",
+          "caption": "Idaho football team, University of Idaho, 1908",
+          "link": "https://www.lib.uidaho.edu/digital/shattuck/items/shattuck177.html",
+          "credit": "C.H. Shattuck Lantern Slides, 1904-1910"
+        },
+        "start_date": { 
+          "year": "1908"
+        },
+        "text": {
+          "headline": "Idaho football team, University of Idaho, 1908",
+          "text": "Idaho football team, 1908, [University of Idaho]"
+        }
+      },{
+        "media": {
+          "url": "https://digital.lib.uidaho.edu/digital/iiif/spec_cs/43/full/pct:12/0/default.jpg",
+          "caption": "Packers Meadows (Idaho), Fire 1910",
+          "link": "https://www.lib.uidaho.edu/digital/shattuck/items/shattuck43.html",
+          "credit": "C.H. Shattuck Lantern Slides, 1904-1910"
+        },
+        "start_date": { 
+          "year": "1910"
+        },
+        "text": {
+          "headline": "Packers Meadows (Idaho), Fire 1910",
+          "text": "Packing up to go to fire, Packers Meadows, Idaho"
+        }
+      }
+    ]
+}

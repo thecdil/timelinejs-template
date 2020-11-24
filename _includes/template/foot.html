@@ -3,6 +3,7 @@
 <script src="{{ '/assets/lib/bootstrap.bundle.min.js' | relative_url }}"></script>
 <!-- other js -->
 {% if page.timeline %}{% include timeline/timelinejs-basic.html %}{% endif %}
+{% if page.timeline-json %}{% include timeline/timelinejs-json.html %}{% endif %}
 {% if page.foot %}{% include {{ page.foot }} %}{% endif %}
 {% if layout.foot %}{% include {{ layout.foot }} %}{% endif %}
 {% include template/scroll-to-top.html %}

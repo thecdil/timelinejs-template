@@ -1,0 +1,5 @@
+<script src="{{ '/assets/lib/timeline3/js/timeline-min.js' | relative_url }}"></script>
+<script>
+    /* init timeline */
+    timeline = new TL.Timeline("timeline-embed","{{ '/media/' | append: page.timeline-json | relative_url }}");
+</script>

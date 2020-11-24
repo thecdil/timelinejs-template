@@ -1,23 +1,17 @@
-# TimelineJS
+# Using timelinejs-template 
 
-By default [TimelineJS](https://timeline.knightlab.com/) is set up to work with their "authoring tool" using Google Sheets, providing an easy way to set up and publish a timeline embed.
-However, relying on Google Sheets can be problematic:
-
-- API outages and changes unexpectedly break the TimelineJS service
-- you may not have a convenient location to host your media files
-- Google platform exposes your users to unnecessary privacy tradeoffs
-
-To avoid these issues you can [self-host your TimelineJS projects](https://timeline.knightlab.com/docs/instantiate-a-timeline.html) and use the standalone javascript to create timelines without relying on any 3rd party services.
-
-The timelinejs-template implements the basics of TimelineJS in a simple Jekyll project template to make self-hosting easy on GitHub Pages.
-This approach is more sustainable, keeping the library assets, metadata, and media together in a self-contained package (rather than multiple 3rd party platforms).
+There are two builtin options for adding TimelineJS timelines to the pages of your site: Basic Timeline (using a spreadsheet) or JSON Timeline (using JSON file). 
+How the timeline is set in the page can be controlled using the `layout` option.
+These options are described below.
+See docs/customize.md for builtin options to customize the website nav and look. 
 
 ## Create a Basic Timeline
 
 ### 1. Set up repository 
 
 - Make your own copy of the [timelinejs-template](https://github.com/thecdil/timelinejs-template) repository by clicking the green "Use this template" button (alternatively, use Import or manually copy files to a new repo).
-- Activate GitHub Pages in your new repository's "Settings".
+- Edit `_config.yml` with your site and repository information
+- In your new repository visit "Settings" to activate GitHub Pages
 
 ### 2. Create Timeline Spreadsheet 
 
@@ -60,7 +54,10 @@ timeline: demo-timeline
 ---
 ```
 
-Layout options:
+### Layout options
+
+The page `layout` set in the front matter controls how the timeline will be displayed in the template.
+These options are available:
 
 - `page` timeline will be inside a container, with navbar, title in h1, and any content above.
 - `page-full-width` timeline will be inside a container-fluid, with navbar, title in h1, and any content above.

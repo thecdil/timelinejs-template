@@ -40,6 +40,16 @@ a {
     }
 }
 
+/* narrow container */ 
+@if variable-exists(container-narrow) { 
+    @media (min-width:992px){
+        .container-narrow{max-width:$container-narrow}
+    }
+    @media (min-width:1200px){
+        .container-narrow{max-width:$container-narrow}
+    }
+}
+
 /* change container size for easier reading */
 @if variable-exists(container-max) {
     @media (min-width:992px){

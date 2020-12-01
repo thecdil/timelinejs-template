@@ -56,8 +56,8 @@ var timelineEvents = {
         {% endfor %}
     ]
 };
-</script>
-<script>
-    /* init timeline */
-    timeline = new TL.Timeline("timeline-embed", timelineEvents);
+
+/* init timeline */
+{% if page.timeline-options %}var timelineOptions = {{ page.timeline-options | jsonify }};{% endif %}
+timeline = new TL.Timeline("timeline-embed", timelineEvents{% if page.timeline-options %}, timelineOptions{% endif %});
 </script>

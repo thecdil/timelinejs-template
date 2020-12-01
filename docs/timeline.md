@@ -81,7 +81,7 @@ If the `timeline` option is not added to the front matter, the stub will act as 
 
 ## Create a Timeline from JSON File
 
-You may have a TimelineJS formatted JSON file, for example downloaded from a [CollectionBuilder](https://collectionbuilder.github.io/) data export, and want a place to host it.
+You may have a [TimelineJS formatted JSON file](https://timeline.knightlab.com/docs/json-format.html), for example downloaded from a [CollectionBuilder](https://collectionbuilder.github.io/) data export, and want a place to host it.
 
 1. Add your TimelineJS JSON file to the repository's "media" folder, e.g. `media/example-timeline.json`
 2. Add the timeline to any page in the repository using the front matter option `timeline-json` with the name of your json file (including the extension). Optionally choose a `layout` value depending on how you want to display the timeline.
@@ -96,6 +96,25 @@ layout: default
 timeline-json: example-timeline.json
 ---
 ```
+
+## Advanced Options
+
+TimelineJS supports some [additional init options](https://timeline.knightlab.com/docs/options.html) (in general, they aren't necessary).
+These options can be passed to the js using `timeline-options` in the page front matter when adding a timeline to a page.
+Add the desired option variables (following the [option docs](https://timeline.knightlab.com/docs/options.html)) nested below `timeline-options` (yml uses two spaces indent to nest).
+
+For example:
+
+```
+timeline: demo-timeline
+timeline-options: 
+  start_at_end: true
+  hash_bookmark: true
+  timenav_position: top
+```
+
+*Note:* many of the options won't make sense for this context and some of them have inconsistent behavior so you may have to experiment with the order to get them to work.
+The most useful option is probably `hash_bookmark: true`.
 
 # Reference
 

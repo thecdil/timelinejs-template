@@ -4,7 +4,7 @@
 {%- assign timeline = site.data[page.timeline] -%}
 {%- assign title = timeline | where: 'Type','title' | first -%}
 {%- assign eras = timeline | where: 'Type','era' -%}
-{%- assign events = timeline | where_exp: 'f','f.Type != "title" and f.Type != "era"' -%}
+{%- assign events = timeline | where: 'Type',null -%}
 var timelineEvents = {
     {% if title %}
     /* add title slide */

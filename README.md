@@ -7,7 +7,7 @@ See [docs/timeline.md](https://github.com/thecdil/timelinejs-template/blob/main/
 
 Demo: <https://thecdil.github.io/timelinejs-template/>
 
-*Note:* since the template implements self hosted TimelineJS3, please explore [TimelineJS](https://timeline.knightlab.com/) for more examples and advanced features.
+*Note:* since the template implements self hosted TimelineJS3, please explore [TimelineJS](https://timeline.knightlab.com/) for more examples, data format documentation, and advanced features.
 
 ## Why timelinejs-template?
 

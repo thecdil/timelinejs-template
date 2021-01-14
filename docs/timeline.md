@@ -39,10 +39,6 @@ Timelinejs-template supports these extra features:
     - Use web-safe filenames, all lowercase with no spaces or odd characters. 
     - In the spreadsheet, put the filename in the "Media" column.
 
-These limitations:
-
-- "Eras" are not implemented
-
 ### 2. Add spreadsheet to repository 
 
 Download or save your spreadsheet as a CSV (it must be a CSV! Google Sheets works well). 

@@ -41,7 +41,6 @@ Timelinejs-template supports these extra features:
 
 These limitations:
 
-- "Time" column is not implemented
 - "Eras" are not implemented
 
 ### 2. Add spreadsheet to repository 

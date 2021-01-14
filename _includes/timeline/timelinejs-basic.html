@@ -41,13 +41,19 @@ var timelineEvents = {
             {% if event['Group'] %}"group": {{ event['Group'] | jsonify }},{% endif %}
             {% if event['Display Date'] %}"display_date": {{ event['Display Date'] | jsonify }},{% endif %}
             {% if event['End Year'] %}"end_date": { 
-                // End Year,End Month,End Day,End Time
+                {% if event['End Time'] %}{% assign end_time = event['End Time'] | split: ':' %}
+                // End Time
+                "hour": "{{ end_time[0] }}", "minute": "{{ end_time[1] }}",{% if end_time[2] %} "second": "{{ end_time[2] }}",{% endif %}{%- endif -%}
+                // End Month,End Day,End Year
                 {% if event['End Month'] %}"month": "{{ event['Month'] }}",{% endif %}
                 {% if event['End Day'] %}"day": "{{ event['Day'] }}",{% endif %}
                 "year": "{{ event['End Year'] }}"
             },{% endif %}
             "start_date": { 
-                // Year,Month,Day
+                {% if event['Time'] %}{% assign time = event['Time'] | split: ':' %}
+                // Time
+                "hour": "{{ time[0] }}", "minute": "{{ time[1] }}",{% if time[2] %} "second": "{{ time[2] }}",{% endif %}{%- endif -%}
+                // Month,Day,Year
                 {% if event['Month'] %}"month": "{{ event['Month'] }}",{% endif %}
                 {% if event['Day'] %}"day": "{{ event['Day'] }}",{% endif %}
                 "year": "{{ event['Year'] }}"

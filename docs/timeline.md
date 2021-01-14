@@ -46,8 +46,8 @@ These limitations:
 
 ### 2. Add spreadsheet to repository 
 
-Download or save your spreadsheet as a CSV (it must be a CSV!). 
-Rename to use a filename with no spaces or special characters (other than dash `-` or underscore `_`), e.g. `example-timeline.csv`.
+Download or save your spreadsheet as a CSV (it must be a CSV! Google Sheets works well). 
+Rename to use a filename with no spaces or special characters (other than dash `-` or underscore `_`), e.g. don't use "Example timeline -- Sheet 1.csv", rename to `example-timeline.csv`.
 
 Copy your spreadsheet into the "_data" folder in your repository.
 

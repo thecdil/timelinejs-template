@@ -2,6 +2,7 @@
 title: About timelinejs-template
 nav: About
 nav_order: 2
+layout: page-narrow
 ---
 
 [timelinejs-template](https://github.com/thecdil/timelinejs-template) is basic Jekyll template for creating self-hosted [TimelineJS](https://timeline.knightlab.com/) on GitHub Pages.

@@ -10,13 +10,13 @@ var timelineEvents = {
     /* add title slide */
     "title": {
         {% if title['Media'] %}"media": {
-            {% if title['Media Caption'] %}"caption": {{ title['Media Caption'] | markdownify | jsonify }},{% endif %}
-            {% if title['Media Credit'] %}"credit": {{ title['Media Credit'] | markdownify | jsonify }},{% endif %}
+            {% if title['Media Caption'] %}"caption": {{ title['Media Caption'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},{% endif %}
+            {% if title['Media Credit'] %}"credit": {{ title['Media Credit'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},{% endif %}
             "url": "{{ title['Media'] | absolute_url }}"
         },{% endif %}
         "text": {
-            "headline": {{ title['Headline'] | markdownify | jsonify }}{% if title['Text'] %},
-            "text": {{ title['Text'] | markdownify | jsonify }}{% endif %}
+            "headline": {{ title['Headline'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }}{% if title['Text'] %},
+            "text": {{ title['Text'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }}{% endif %}
         }
     },
     {%- endif -%}
@@ -24,8 +24,8 @@ var timelineEvents = {
     "eras": [ //start_date end_date text
         {% for era in eras %}{
             "text": {
-                "headline": {{ era['Headline'] | markdownify | jsonify }}{% if era['Text'] %},
-                "text": {{ era['Text'] | markdownify | jsonify }}{% endif %}
+                "headline": {{ era['Headline'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }}{% if era['Text'] %},
+                "text": {{ era['Text'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }}{% endif %}
             },
             "end_date": { 
                 {% if era['End Time'] %}{% assign end_time = era['End Time'] | split: ':' %}
@@ -52,15 +52,15 @@ var timelineEvents = {
         {% for event in events %}{
             {% if event['Media'] %}"media": {
                 // Media,Media Credit,Media Caption,Media Thumbnail
-                "caption": {{ event['Media Caption'] | markdownify | jsonify }},
-                "credit": {{ event['Media Credit'] | markdownify | jsonify }},
-                {% if event['Media Thumbnail'] %}"thumbnail": {{ event['Media Thumbnail'] | markdownify | jsonify }},{% endif %}
+                "caption": {{ event['Media Caption'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},
+                "credit": {{ event['Media Credit'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},
+                {% if event['Media Thumbnail'] %}"thumbnail": {{ event['Media Thumbnail'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},{% endif %}
                 "url": {% if event['Media'] contains 'http' %}{{ event['Media'] | jsonify }}{% else %}{{ '/media/' | append: event['Media'] | relative_url | jsonify }}{% endif %}
             },{% endif %}
             "text": {
                 //Headline,Text
-                "headline": {{ event['Headline'] | markdownify | jsonify }}{% if event['Text'] %},
-                "text": {{ event['Text'] | markdownify | jsonify }}{% endif %}
+                "headline": {{ event['Headline'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }}{% if event['Text'] %},
+                "text": {{ event['Text'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }}{% endif %}
             },
             {% if event['Background'] %}"background": {{ event['Background'] | jsonify }},{% endif %}
             {% if event['Group'] %}"group": {{ event['Group'] | jsonify }},{% endif %}

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+        <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
             <script>
                 function site_search() {
                     var query = document.getElementById("site-search").value;
-                    window.open("{{ '/search.html' | absolute_url }}?q=" + encodeURIComponent(query), "_self" );
+                    window.open("{{ '/search.html' | relative_url }}?q=" + encodeURIComponent(query), "_self" );
                     }
             </script>
             <form class="form-inline my-2 my-lg-0" onsubmit="site_search(); return false;">

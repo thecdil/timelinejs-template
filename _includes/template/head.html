@@ -6,11 +6,11 @@
 {% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
 <!-- built with timelinejs-template https://github.com/thecdil/timelinejs-template -->
 <meta name="generator" content="thecdil/timelinejs-template">
-<link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | absolute_url }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
 
-<link rel="stylesheet" href="{{ '/assets/lib/bootstrap.min.css' | absolute_url }}">
-{% if page.timeline or page.timeline-json %}<link rel="stylesheet" href="{{ '/assets/lib/timeline3/css/timeline.css' | absolute_url }}">{% endif %}
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | absolute_url }}" type="text/css">
+<link rel="stylesheet" href="{{ '/assets/lib/bootstrap.min.css' | relative_url }}">
+{% if page.timeline or page.timeline-json %}<link rel="stylesheet" href="{{ '/assets/lib/timeline3/css/timeline.css' | relative_url }}">{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" type="text/css">
 
 {% if site.noindex == true or page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
 {% include template/analytics.html %}

@@ -16,7 +16,7 @@
 {% if include.img %}
 <style>
 #jumbtron-feature {
-    background-image: url({{ include.img | absolute_url }});
+    background-image: url({{ include.img | relative_url }});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

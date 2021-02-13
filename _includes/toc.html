@@ -5,7 +5,7 @@
                 <h5 class="card-title">Contents:</h5>
                 <ul>
                     {% for section in site.html_pages %}{% if section.nav %}
-                    <li><a href="{{ section.url | absolute_url }}">{% if section.nav == true %}{{ section.title }}{% else %}{{ section.nav }}{% endif %}</a> {% if section.topics %}<small>| topics: {{ section.topics }}</small>{% endif %}</li>
+                    <li><a href="{{ section.url | relative_url }}">{% if section.nav == true %}{{ section.title }}{% else %}{{ section.nav }}{% endif %}</a> {% if section.topics %}<small>| topics: {{ section.topics }}</small>{% endif %}</li>
                     {% endif %}{%- endfor -%}
                 </ul>
             </div>

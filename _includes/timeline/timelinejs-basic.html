@@ -12,7 +12,7 @@ var timelineEvents = {
         {% if title['Media'] %}"media": {
             {% if title['Media Caption'] %}"caption": {{ title['Media Caption'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},{% endif %}
             {% if title['Media Credit'] %}"credit": {{ title['Media Credit'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},{% endif %}
-            "url": "{{ title['Media'] | absolute_url }}"
+            "url": "{{ title['Media'] | relative_url }}"
         },{% endif %}
         "text": {
             "headline": {{ title['Headline'] | markdownify | remove: '<p>' | remove: '</p>' | jsonify }}{% if title['Text'] %},

@@ -33,7 +33,7 @@ search: false
 # GOOGLE ANALYTICS [optional!]
 #
 # leave this blank or comment out to NOT include google code
-# Add your google-analytics-id to automatically add the embed code, e.g. "UA-76328753-1"
+# Add your google-analytics-id to automatically add the embed code, e.g. "G-123XXXXXX"
 # google-analytics-id: 
 
 ##########
